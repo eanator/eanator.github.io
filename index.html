@@ -18,17 +18,29 @@
 </head>
 <body>
 
-    <header>
-        <div class="header-links">
+    <!-- Hero Section with Slideshow Background -->
+    <header class="hero-header">
+        <!-- Slideshow Background -->
+        <div class="slideshow-container">
+            <div class="slideshow-slide active" style="background-image: url('/assets/images/frame_022_311903ms.png');"></div>
+            <div class="slideshow-slide" style="background-image: url('/assets/images/frame_026_993643ms.png');"></div>
+            <div class="slideshow-slide" style="background-image: url('/assets/images/frame_009_1628823ms.png');"></div>
+            <div class="slideshow-slide" style="background-image: url('/assets/images/frame_018_410952ms.png');"></div>
+            <div class="slideshow-slide" style="background-image: url('/assets/images/frame_026_1040258ms.png');"></div>
+            <div class="slideshow-slide" style="background-image: url('/assets/images/frame_030_779368ms.png');"></div>
+            <div class="slideshow-overlay"></div>
+        </div>
+
+        <!-- Header Links -->
+        <nav class="header-links">
             <a href="https://store.steampowered.com/app/4045170/Bingo_Betty/" target="_blank">Steam</a>
             <a href="https://x.com/BingoBettyGame" target="_blank">X / Twitter</a>
             <a href="https://www.youtube.com/watch?v=rKn2ACMp2dw" target="_blank">YouTube</a>
             <a href="/presskit/">Press Kit</a>
-        </div>
-    
-    
-    <!-- Hero Section -->
-        <div class="hero">
+        </nav>
+
+        <!-- Hero Content -->
+        <div class="hero-content">
             <img src="/assets/images/new_logo_1280x720.png" alt="Bingo Betty Logo" class="hero-logo">
             <div class="tagline">
                 <img src="/assets/images/aintyourgmasbingo.png" alt="This ain't your grandma's bingo!">
@@ -140,6 +152,21 @@
         </div>
         <p class="copyright">&copy; 2025 Elias Austin. All rights reserved.</p>
     </footer>
+
+    <!-- Slideshow Script -->
+    <script>
+        const slides = document.querySelectorAll('.slideshow-slide');
+        let currentSlide = 0;
+        
+        function nextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+        
+        // Change slide every 5 seconds
+        setInterval(nextSlide, 5000);
+    </script>
 
 </body>
 </html>
