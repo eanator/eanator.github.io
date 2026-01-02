@@ -75,6 +75,32 @@ body {
     animation: float 3s ease-in-out infinite;
 }
 
+header { 
+    background: var(--bg-dark);
+    padding: 2rem;
+    text-align: center;
+    border-top: 3px solid var(--neon-pink);
+}
+.header-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+    
+.header-links a {
+        font-family: 'Stepalange', sans-serif;
+        color: var(--neon-pink);
+        text-decoration: none;
+        font-size: 1.1rem;
+        transition: color 0.2s;
+}
+    
+.header-links a:hover {
+        color: var(--neon-pink-glow);
+}
+
 @keyframes float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
@@ -242,32 +268,6 @@ section {
     font-size: 1.1rem;
     color: var(--text-cream);
     margin-top: 1.5rem;
-}
-
-header { 
-    background: var(--bg-dark);
-    padding: 2rem;
-    text-align: center;
-    border-top: 3px solid var(--neon-pink);
-}
-.header-links {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-bottom: 1.5rem;
-    flex-wrap: wrap;
-}
-    
-.header-links a {
-        font-family: 'Stepalange', sans-serif;
-        color: var(--neon-pink);
-        text-decoration: none;
-        font-size: 1.1rem;
-        transition: color 0.2s;
-}
-    
-.header-links a:hover {
-        color: var(--neon-pink-glow);
 }
 
 /* Footer */
