@@ -101,6 +101,8 @@ body {
     gap: 2rem;
     padding: 1.5rem 2rem;
     flex-wrap: wrap;
+    background: var(--bg-dark);
+    border-bottom: 3px solid var(--neon-pink);
 }
 
 .header-links a {
