@@ -42,10 +42,38 @@ body {
     padding: 0 2rem;
 }
 
+/* ===== SITE NAVIGATION ===== */
+.site-nav {
+    background: var(--bg-dark);
+    border-bottom: 3px solid var(--neon-pink);
+}
+
+.header-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1.5rem 2rem;
+    flex-wrap: wrap;
+}
+
+.header-links a {
+    font-family: 'Stepalange', sans-serif;
+    color: var(--neon-pink);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 10px rgba(255, 110, 180, 0.5);
+}
+
+.header-links a:hover {
+    color: var(--neon-pink-glow);
+    text-shadow: 0 0 20px rgba(255, 110, 180, 0.8);
+}
+
 /* ===== HERO HEADER WITH SLIDESHOW ===== */
 .hero-header {
     position: relative;
-    min-height: 100vh;
+    min-height: calc(100vh - 60px);
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -90,33 +118,6 @@ body {
         rgba(26, 15, 36, 0.9) 100%
     );
     z-index: 1;
-}
-
-/* Header Navigation */
-.header-links {
-    position: relative;
-    z-index: 10;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    padding: 1.5rem 2rem;
-    flex-wrap: wrap;
-    background: var(--bg-dark);
-    border-bottom: 3px solid var(--neon-pink);
-}
-
-.header-links a {
-    font-family: 'Stepalange', sans-serif;
-    color: var(--neon-pink);
-    text-decoration: none;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
-    text-shadow: 0 0 10px rgba(255, 110, 180, 0.5);
-}
-
-.header-links a:hover {
-    color: var(--neon-pink-glow);
-    text-shadow: 0 0 20px rgba(255, 110, 180, 0.8);
 }
 
 /* Hero Content */
@@ -456,6 +457,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 2rem;
+    align-items: start;
 }
 
 @media (max-width: 500px) {
@@ -477,6 +479,7 @@ footer {
 
 .screenshot img {
     width: 100%;
+    height: auto;
     display: block;
 }
 
@@ -689,7 +692,7 @@ footer {
     }
 
     .hero-header {
-        min-height: 80vh;
+        min-height: calc(80vh - 60px);
     }
 
     .steam-button {
