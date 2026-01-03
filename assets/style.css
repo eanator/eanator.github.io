@@ -473,6 +473,8 @@ footer {
     transition: transform 0.3s ease;
     aspect-ratio: 16 / 9;
     background: #000;
+    width: 100%;
+    height: auto;
 }
 
 .screenshot:hover {
@@ -481,10 +483,10 @@ footer {
 
 .screenshot img {
     width: 100%;
-    height: auto;
+    height: auto !important;
+    max-width: 100%;
     display: block;
-    height: 100%;
-    object-fit: contain;
+    object-fit: unset;
 }
 
 .factsheet {
