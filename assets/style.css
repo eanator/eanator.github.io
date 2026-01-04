@@ -304,6 +304,19 @@ section {
     background: linear-gradient(135deg, #2a475e, #3d6a8a);
 }
 
+/* Steam Widget */
+.steam-widget-container {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.steam-widget-container iframe {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+}
+
 .cta-subtitle {
     font-size: 1.1rem;
     color: var(--text-cream);
